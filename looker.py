@@ -17,6 +17,9 @@ def encode_image(image_path):
 # Path to your image
 image_path = "image.png"
 
+# user prompt
+prompt = "explain what this text means and if possible who wrote it"
+
 # Getting the base64 string
 base64_image = encode_image(image_path)
 
@@ -33,7 +36,7 @@ payload = {
       "content": [
         {
           "type": "text",
-          "text": "What’s in this image?"
+          "text": prompt
         },
         {
           "type": "image_url",
